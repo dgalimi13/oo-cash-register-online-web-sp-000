@@ -15,11 +15,11 @@ class CashRegister
     
     def apply_discount
     binding.pry
-    real_discount = self.discount / 100
+    # real_discount = self.discount / 100
     
-    savings = self.total * real_discount 
-    self.total = self.total - savings
-    self.total
+    # savings = self.total * real_discount 
+   # self.total = self.total - savings
+    self.total = (total * ((100.0 - discount.to_f) / 100)).to_i
     end 
     
 end
